@@ -56,6 +56,7 @@ img {
 /* Шапка сайта */
 .header {
   background: var(--secondary-accent-color);
+  border-bottom: 1px solid rgba(236, 236, 236, 1);
 }
 /* Утиилиты */
 
@@ -96,6 +97,8 @@ img {
 .main-nav {
   display: flex;
   align-items: center;
+
+  min-height: 80px;
 }
 
 .nav {
@@ -130,8 +133,8 @@ img {
 
 .site-nav .link,
 .contact-nav .link {
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 
   font-weight: 500;
   line-height: 1.14;
@@ -154,34 +157,50 @@ img {
 .site-nav .link.current {
   color: var(--accent-color);
 }
+
+/* sprite */
+/* #svg-sprite {
+  display: none;
+} */
+
 .text.link,
 .text.link {
+  display: inline-flex;
+  align-items: center;
+
   font-weight: 500;
   line-height: 1.14;
   color: var(--text-color);
   text-decoration: none;
-}
-/* sprite */
-#svg-sprite {
-  display: none;
+  /* outline: 1px solid tomato; */
 }
 
-.text.link {
-  display: flex;
-  padding: 20px;
-  /* padding-top: 32px;
-  padding-bottom: 32px; */
-  color: var(--text-color);
-}
-
-.icon {
-  width: 16px;
+.icon-evelope {
+  display: block;
   height: 12px;
+  width: 16px;
+}
+
+.icon-smartphone {
+  display: block;
+  height: 16px;
+  width: 10px;
+}
+
+.icon-evelope,
+.icon-smartphone {
   margin-right: 10px;
   cursor: pointer;
   fill: currentColor;
 }
-.text.link:hover .icon {
+
+.text.link:hover .icon-evelope,
+.text.link:hover .icon-smartphone {
+  color: var(--accent-color);
+}
+
+.text.link:focus .icon-evelope,
+.text.link:focus .icon-smartphone {
   color: var(--accent-color);
 }
 /* /Шапка сайта */
@@ -419,6 +438,14 @@ img {
   margin-bottom: 30px;
 }
 
+.social-icons.list {
+  display: flex;
+}
+
+.social-icons li + li {
+  margin-left: 10px;
+}
+
 .social-link {
   display: flex;
   flex-direction: column;
@@ -428,7 +455,7 @@ img {
   height: 44px;
   width: 44px;
   border-radius: 50%;
-  color: var(--bg-primary);
+  color: rgba(175, 177, 184, 1);
   cursor: pointer;
 }
 
@@ -441,13 +468,19 @@ img {
   fill: currentColor;
 }
 
-.social-link:hover {
+.social-link:hover,
+.social-link:focus {
   color: #ffffff;
   background-color: var(--accent-color);
 }
 
+.social-link:focus {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
 .social-icons {
   display: flex;
+  /* justify-content: space-between; */
 }
 
 /*/ Спрайт соцсети команды */
@@ -465,7 +498,7 @@ img {
 }
 
 .clients-box {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -473,12 +506,13 @@ img {
   height: 90px;
   border-radius: 4px;
   border: 1px solid #afb1b8;
-
   color: #afb1b8;
 }
 
-.clients-box:hover {
+.clients-box:hover,
+.clients-box:focus {
   color: rgba(33, 150, 243, 1);
+  border-color: rgba(33, 150, 243, 1);
 }
 
 .clients-box-icon {
@@ -547,6 +581,9 @@ img {
   border-radius: 50%;
   cursor: pointer;
 }
+/* .shadow {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+} */
 
 .social-link.instagram {
   background-image: url("../images/instagram.svg");
@@ -574,7 +611,8 @@ img {
   background-position: center;
 }
 
-.social-link:hover {
+.social-icons .social-link:hover,
+.social-icons .social-link:focus {
   background-color: var(--accent-color);
 }
 
@@ -589,13 +627,14 @@ img {
   margin-left: 70px;
 }
 
-.social-icons {
+.social-icons.list {
   display: flex;
   justify-content: space-between;
 }
 
 .footer-nav-position {
   display: flex;
+  align-items: baseline;
 }
 /* / Футер */
 
@@ -643,9 +682,11 @@ img {
 
 .filter .button:hover,
 .filter .button:focus {
-  border-color: var(--accent-color);
   color: var(--secondary-accent-color);
   background: var(--accent-color);
+  border-color: var(--accent-color);
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
 }
 
 /* CARD */
@@ -655,7 +696,8 @@ img {
   text-decoration: none;
 }
 
-.card.link:hover {
+.card.link:hover,
+.card.link:focus {
   box-shadow: var(--card-shadow);
 }
 .card-thumb {
