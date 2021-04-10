@@ -153,6 +153,15 @@ img {
   color: var(--accent-color);
 }
 
+.current::before {
+  display: block;
+  height: 4px;
+  width: 48px;
+  border-radius: 2px;
+
+  color: var(--accent-color);
+}
+
 /* акцент на текущей странице */
 .site-nav .link.current {
   color: var(--accent-color);
