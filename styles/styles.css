@@ -781,3 +781,37 @@ img {
   line-height: 1.87;
   color: var(--text-color);
 }
+
+/* overlay */
+.card-box {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 370px;
+  height: auto;
+}
+
+.overlay .text {
+  padding: 62px 20px;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 28px;
+  letter-spacing: 0.03em;
+  text-align: left;
+  color: rgba(255, 255, 255, 1);
+  background: rgba(33, 150, 243, 0.9);
+}
+
+.card-box .overlay {
+  display: none;
+}
+
+.card-box:hover .overlay {
+  display: block;
+  height: 294px;
+}
+/* // overlay */
