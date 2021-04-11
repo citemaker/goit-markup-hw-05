@@ -275,8 +275,12 @@ img {
   width: 270px;
 }
 
-.title-none {
-  display: none;
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
 /*  вектор как background-image*/
 .icon-antenna {
@@ -414,11 +418,20 @@ img {
 .card-team {
   box-shadow: var(--card-shadow);
   overflow: hidden;
+  background-color: #fff;
 }
 
 .team.list {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+}
+
+.team.list .item + .item {
+  margin-left: 30px;
+}
+
+.team.list .item {
+  width: 270px;
 }
 
 .section .title {
@@ -449,7 +462,6 @@ img {
 
 .team .text {
   margin-top: 0;
-  /* margin-bottom: 30px; */
 
   font-size: 16px;
   font-style: normal;
@@ -552,10 +564,12 @@ img {
 .contacts.list {
   padding: 0;
   margin: 0;
+  margin-top: 9px;
 }
 
 .footer.footer-page {
   padding-top: 60px;
+  padding-bottom: 60px;
   background: var(--bg-accent);
 }
 
@@ -581,17 +595,12 @@ img {
   color: var(--secondary-accent-color);
 }
 
-.footer-contact-item {
-  margin-top: 9px;
-}
-
 .footer .contacts .text {
   font-style: normal;
   font-weight: 400;
   line-height: 1.71;
   text-decoration: none;
-
-  color: var(--text-color);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .contacts.list .text:hover,
@@ -680,7 +689,7 @@ img {
   justify-content: center;
 
   margin-top: 0;
-  margin-bottom: 34px;
+  margin-bottom: 50px;
 }
 
 .filter.list .item + .item {
@@ -692,6 +701,7 @@ img {
   border-radius: 4px;
   border: var(--accent-color);
   padding: 10px 32px;
+  background: rgba(245, 244, 250, 1);
 
   font-style: normal;
   font-weight: 500;
@@ -753,7 +763,7 @@ img {
   flex-wrap: wrap;
   margin-left: calc(-1 * var(--card-set-gap));
   margin-top: calc(-1 * var(--card-set-gap));
-  margin: -15px;
+  /* margin: -15px; */
 }
 
 /* флекс-элемент */
@@ -773,7 +783,7 @@ img {
 }
 
 .gallery .gallery-text {
-  margin-top: 0;
+  margin-top: 4px;
 
   font-style: normal;
   font-weight: 400;
@@ -791,6 +801,9 @@ img {
   position: absolute;
   top: 0;
   left: 0;
+  top: 37%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 370px;
   height: auto;
 }
@@ -807,11 +820,13 @@ img {
 }
 
 .card-box .overlay {
-  display: none;
+  /* display: none; */
+  opacity: 0;
 }
 
 .card-box:hover .overlay {
-  display: block;
+  /* display: block; */
+  opacity: 1;
   height: 294px;
 }
 /* // overlay */
