@@ -108,6 +108,7 @@ img {
 
 /* Site-nav */
 .site-nav.list {
+  position: relative;
   display: flex;
   margin-left: 93px;
 
@@ -153,14 +154,20 @@ img {
   color: var(--accent-color);
 }
 
-.current::before {
-  display: block;
+/* .current::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: inline-block;
+  content: '';
   height: 4px;
   width: 48px;
   border-radius: 2px;
 
-  color: var(--accent-color);
-}
+  border-color: var(--accent-color);
+} */
 
 /* акцент на текущей странице */
 .site-nav .link.current {
@@ -858,8 +865,21 @@ img {
   border-radius: 4px;
   background-color: rgba(255, 255, 255, 1);
 }
+.current::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  /* transform: translate(-50%, -50%); */
+  content: '';
+  display: inline-block;
+  height: 4px;
+  width: 48px;
+  border: rgba(33, 150, 243, 1);
+  border-radius: 2px;
 
- .backdrop .button {
+}
+
+ .modal .modal-button {
    /* position: relative; */
 /*height: 30px;
   width: 30px;
