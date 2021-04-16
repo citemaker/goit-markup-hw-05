@@ -154,26 +154,33 @@ img {
   color: var(--accent-color);
 }
 
-/* .current::before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  display: inline-block;
-  content: '';
-  height: 4px;
-  width: 48px;
-  border-radius: 2px;
-
-  border-color: var(--accent-color);
-} */
-
 /* акцент на текущей странице */
 .site-nav .link.current {
   color: var(--accent-color);
 }
+/* псевдоэлемент нижн подчеркивание */
+.site-nav .link.current {
+  color: var(--accent-color);
+}
 
+.site-nav .item{
+  position: relative;
+}
+.site-nav .current::after {
+  position: absolute;
+  bottom: -6%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: inline-block;
+  content: "";
+  height: 4px;
+  width: 48px;
+  border-radius: 2px;
+
+  background-color: #2196f3;
+}
+/*// псевдоэлемент нижн подчеркивание */
 /* sprite */
 
 .text.link,
