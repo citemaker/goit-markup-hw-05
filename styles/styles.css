@@ -141,6 +141,10 @@ img {
   line-height: 1.14;
   color: var(--title-color);
   text-decoration: none;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav .link:hover,
@@ -192,6 +196,9 @@ img {
   line-height: 1.14;
   color: var(--text-color);
   text-decoration: none;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .icon-evelope {
@@ -211,6 +218,7 @@ img {
   margin-right: 10px;
   cursor: pointer;
   fill: currentColor;
+  
 }
 
 .text.link:hover .icon-evelope,
@@ -510,6 +518,8 @@ img {
   border-radius: 50%;
   color: rgba(175, 177, 184, 1);
   cursor: pointer;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .instagram,
@@ -560,6 +570,10 @@ img {
   border-radius: 4px;
   border: 1px solid #afb1b8;
   color: #afb1b8;
+
+  transition-property: color, border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-box:hover,
@@ -615,7 +629,10 @@ img {
   line-height: 1.71;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.6);
-}
+
+  transition-property: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+} 
+ 
 
 .contacts.list .text:hover,
 .contacts.list .text:focus {
@@ -630,6 +647,8 @@ img {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   cursor: pointer;
+
+  transition-property: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* .shadow {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -680,6 +699,8 @@ img {
 .social-icons.list {
   display: flex;
   justify-content: space-between;
+
+   transition-property: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-nav-position {
@@ -722,7 +743,9 @@ img {
   font-size: 16px;
   line-height: 1.63;
   text-align: center;
-  letter-spacing: 0.03em;
+   transition-property: color, background-color, border-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button.list {
@@ -745,6 +768,8 @@ img {
   width: 370px;
   overflow: hidden;
   text-decoration: none;
+
+  transition-property: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card.link:hover,
@@ -836,6 +861,10 @@ img {
 .card-box .overlay {
   /* display: none; */
   opacity: 0;
+
+  /* transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 .card-box:hover .overlay {
