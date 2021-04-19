@@ -554,9 +554,13 @@ img {
 /* новое цсс */
 .clients-list.list {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   padding: 0;
   list-style: none;
+}
+
+.clients-list.list .item + .item {
+  margin-left: 30px;
 }
 
 .clients-box {
@@ -629,7 +633,11 @@ img {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.6);
 
-  transition-property: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contacts.list .footer-contact-item {
+  margin-top: 9px;
 }
 
 .contacts.list .text:hover,
@@ -689,8 +697,8 @@ img {
 }
 
 .footer-social-box {
-  width: 206px;
-  height: 80px;
+  /* width: 206px;
+  height: 80px; */
   margin-left: 70px;
 }
 
